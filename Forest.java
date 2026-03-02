@@ -26,6 +26,12 @@ public class Forest {
     }
     
     public void initializeForest(){
+        for(int i = 0; i < grid.length; i++){
+            for(int j = 0; j < grid[0].length; j++){
+                grid[i][j] = new Tree(0);
+            }
+        }
+        
         // Step 1: Determine how many cells in the grid should start as TREE
         //         based on initialTreeCount and the grid dimensions.
         // Step 2: Fill the grid with EMPTY trees first so every cell has a Tree object.
